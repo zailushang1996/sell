@@ -1,6 +1,8 @@
 package com.imooc.sell.dataobject;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.imooc.sell.enums.ProductStatusEnum;
+import com.imooc.sell.utils.EnumUtil;
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -39,7 +41,14 @@ public class ProductInfo {
     /** 类目编号. */
     private Integer categoryType;
 
+    private Date createTime;
 
+    private Date updateTime;
+
+    @JsonIgnore
+    public ProductStatusEnum getProductStatusEnum() {
+        return EnumUtil.getByCode(productStatus, ProductStatusEnum.class);
+    }
 
 
 }

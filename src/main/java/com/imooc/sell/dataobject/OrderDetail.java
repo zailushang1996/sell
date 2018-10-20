@@ -1,5 +1,6 @@
 package com.imooc.sell.dataobject;
 
+import lombok.Data;
 import org.hibernate.annotations.DynamicInsert;
 
 import javax.persistence.Entity;
@@ -11,6 +12,7 @@ import java.math.BigDecimal;
  * 2017-06-11 17:20
  */
 @Entity
+@Data
 public class OrderDetail {
 
     @Id
