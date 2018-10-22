@@ -7,5 +7,9 @@
 
 
 ## lombok
-可以让项目打包是自动给实体加上get，set方法（给实体类加上@Data注解），配合lombok在IDEA的插件效果更佳，
+可以让项目打包是自动给实体加上get，set方法（给实体类加上@Data注解），配合lombok在IDEA的插件效果更佳
+
+## 使用spring data提供的PageHelper实现分页查询，参考sell.controller.BuyerOrderController类
+
+## 配置Jackson使返回给前端为空的字段不显示
 
