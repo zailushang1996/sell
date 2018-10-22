@@ -6,6 +6,9 @@ spring:
     url: jdbc:mysql://140.143.227.55/sell?characterEncoding=utf-8&useSSL=false
   jpa:
     show-sql: true
+  jackson:
+    default-property-inclusion: non_null
+
 
 
 

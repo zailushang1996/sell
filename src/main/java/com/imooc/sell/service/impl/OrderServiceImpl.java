@@ -129,7 +129,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public Page<OrderDTO> findList(String buyerOpenid, Pageable pageable) {
-        Page<OrderMaster> orderMasterPage = orderMasterRepository.findByBuyerOpenid(buyerOpenid, pageable);
+        Page<OrderMaster> orderMasterPage = orderMasterRepository.findAllByBuyerOpenid(buyerOpenid, pageable);
 
         List<OrderDTO> orderDTOList = OrderMaster2OrderDTOConverter.convert(orderMasterPage.getContent());
 
